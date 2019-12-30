@@ -9,3 +9,16 @@
     width: 40px;
     height: 45px;
 }
+
+#nav-bar ul li a:hover {
+    color: rgb(44, 202, 44)!important;
+}
+
+.navbar-nav li a {
+    float: right;
+    text-align: left;
+}
+
+.form-inline {
+    float: right;
+}
