@@ -1,0 +1,98 @@
+/* variables for colors and box-shadow */
+:root {
+    --primary: rgb(238, 248, 242);
+    --secondary: rgb(199, 247, 211);
+    --dark: #0b0b0b;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+/* Top Container */
+.top-container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+        'showcase showcase top-box-a'
+        'showcase showcase top-box-b';
+}
+
+/*  Showcase */
+.showcase {
+    grid-area: showcase;
+    min-height: 400px;
+    background: url(../img/img1.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: table;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    margin-left: 20px;
+}
+
+.showcase h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    padding-bottom: 0;
+}
+
+.showcase p {
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.top-box {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding: 1.2rem;
+}
+
+.top-box-a {
+    grid-area: top-box-a;
+    background: var(--primary);
+    box-shadow: var(--shadow);
+}
+
+.top-box-b {
+    grid-area: top-box-b;
+    background: var(--primary);
+    box-shadow: var(--shadow);
+}
+
+.btn {
+    background: var(--secondary);
+}
+
+.boxes {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.box {
+    background: var(--primary);
+    text-align: center;
+    padding-bottom: 1.5rem 2rem;
+    box-shadow: var(--shadow);
+}
+
+.box a {
+    color: #333;
+}
+.info img {
+    width: 200px;
+    height: 200px;
+}
+.info {
+    justify-items: center;
+    background: var(--primary);
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 2fr;
+    padding: 3rem;
+}
