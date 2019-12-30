@@ -43,6 +43,16 @@
 
 .carousel-inner .carousel-item img {
     height: 92.7vh;
+    width: 100%;
     
 }
 
+@media screen and (max-width: 900px) {
+    .carousel-inner .carousel-item img {
+        height: 50vh;
+        width: 100%;  
+    }
+    .title {
+        font-size: 1.5em;
+    }
+}
