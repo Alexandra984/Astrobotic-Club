@@ -63,11 +63,11 @@ const createRegisterPage = ()=> {
         const text = document.createElement("P");
         text.setAttribute("id", "selectPlanets");
         text.innerHTML = "Selecteaza despre ce planeta vrei sa aflii informatii:";
-        document.body.appendChild(text);
+        document.getElementById("form-1").appendChild(text);
 
         
         const select = document.createElement("SELECT");
-        document.body.appendChild(select);
+        document.getElementById("form-1").appendChild(select);
 
         const option1 = document.createElement("OPTION");
         option1.setAttribute("value", "mercur");
@@ -115,29 +115,32 @@ const createRegisterPage = ()=> {
         document.getElementsByTagName("select")[0].appendChild(option9);
 
         // radio input
-        const input7 = document.createElement("INPUT"); 
-        input7.setAttribute("type", "radio");
-        input7.setAttribute("value", "Male");
-        input7.innerHTML = "Male";
-        document.getElementById("form-1").appendChild(input7);
+        // const input7 = document.createElement("INPUT"); 
+        // input7.setAttribute("type", "radio");
+        // input7.setAttribute("value", "Male");
+        // const male = document.createTextNode("Male")
+        // input7.appendChild(male);
+        // document.getElementById("form-1").appendChild(input7);
 
-        const input8 = document.createElement("INPUT"); 
-        input8.setAttribute("type", "radio");
-        input8.setAttribute("value", "Female");
-        input8.innerHTML = "Female";
-        document.getElementById("form-1").appendChild(input8);
+        // const input8 = document.createElement("INPUT"); 
+        // input8.setAttribute("type", "radio");
+        // input8.setAttribute("value", "Female");
+        // input8.innerHTML = "Female";
+        // document.getElementById("form-1").appendChild(input8);
 
-        const input10 = document.createElement("INPUT"); 
-        input10.setAttribute("type", "radio");
-        input10.setAttribute("value", "Alien");
-        input10.innerHTML = "Alien";
-        document.getElementById("form-1").appendChild(input10);
+        // const input10 = document.createElement("INPUT"); 
+        // input10.setAttribute("type", "radio");
+        // input10.setAttribute("value", "Alien");
+        // input10.innerHTML = "Alien";
+        // document.getElementById("form-1").appendChild(input10);
 
+        
         // button input
-        const button1 = document.createElement("BUTTON"); 
-        input8.setAttribute("type", "button");
-        input8.setAttribute("value", "Trimite");
-        document.getElementById("form-1").appendChild(button1);
+        const buton1 = document.createElement("BUTTON");
+        const text1 = document.createTextNode("Trimite");
+        buton1.appendChild(text1);
+        document.getElementById("form-1").appendChild(buton1);
+       
     };
 
     createForm();
