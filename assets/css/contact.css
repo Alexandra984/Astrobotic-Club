@@ -3,3 +3,71 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(../img/background.jpg);
+    
+}
+
+#form-1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border: 4px solid rgb(199, 247, 211);
+    /* box-shadow: 1px 1px rgba(104, 104, 104, 0.8); */
+    border-radius: 5px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+
+h2 {
+    font-style: italic;
+    font-size: 35px;
+    color: rgb(199, 200, 211);
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+input {
+    
+    width: 320px;
+    height: 50px;
+    outline: none;
+    border: 1px solid rgb(199, 247, 211);
+    text-align: center;
+    font-style: 17px;
+    font-style: italic;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    
+}
+
+#form-1 button {
+    width: 334px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: lighter;
+    color: rgba(199, 200, 211, alpha);
+    border: 0px;
+    background-color: rgb(199, 247, 211);
+    font-style: italic;
+    padding-left: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+select {
+    margin-bottom: 10px;
+  
+}
+
+#form-1 .checkbox {
+    width: 20px;
+    margin-top: -20px;
+}

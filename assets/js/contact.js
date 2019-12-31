@@ -6,6 +6,11 @@ const createRegisterPage = ()=> {
         form.setAttribute("id", "form-1");
         document.body.appendChild(form);
 
+        // form title
+        const title = document.createElement("H2");
+        title.innerHTML = "Inregistrare";
+        document.getElementById("form-1").appendChild(title); 
+
         // creating inputs
 
         // first name input
@@ -37,13 +42,15 @@ const createRegisterPage = ()=> {
         student.innerHTML = "Student";
         document.getElementById("form-1").appendChild(student);
         const input5 = document.createElement("INPUT");
+        input5.classList.add("checkbox");
         input5.setAttribute("type", "checkbox");
         document.getElementById("form-1").appendChild(input5);
         
         const teacher = document.createElement("P");
-        teacher.innerHTML = "Teacher";
+        teacher.innerHTML = "Profesor";
         document.getElementById("form-1").appendChild(teacher);
         const input6 = document.createElement("INPUT");
+        input6.classList.add("checkbox");
         input6.setAttribute("type", "checkbox");
         document.getElementById("form-1").appendChild(input6);
 

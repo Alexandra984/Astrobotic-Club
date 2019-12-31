@@ -26,6 +26,7 @@
 #nav-bar {
     position: sticky;
     z-index:2;
+    background-color: #fff;
 }
 
 #nav-bar ul li a:hover {
