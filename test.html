@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/c58e1b313a.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        const input4 = document.createElement("INPUT");
+        input4.setAttribute("type", "password");
+        input4.setAttribute("placeholder", "Password");
+        input4.setAttribute("aria-describedby", "error-password");
+        input4.setAttribute("id", "password");
+        document.body.appendChild(input4);
+        const i = document.createElement("i");
+        i.setAttribute("id", "pass-status");
+        i.setAttribute("class", "fa fa-eye");
+        i.setAttribute("aria-hidden", "true");
+        i.setAttribute("onclick", "viewPassword()");
+        document.body.appendChild(i);
+
+        console.log(i);
+
+        function viewPassword() {
+            var password = document.getElementById('password');
+            var passStatus = document.getElementById('pass-status');
+
+            if (password.type == 'password'){
+            password.type='text';
+            passStatus.className='fa fa-eye-slash';
+
+            }
+            else{
+            password.type='password';
+            passStatus.className='fa fa-eye';
+            }
+        }
+
+       
+  
+    </script>
+</body>
+</html>
