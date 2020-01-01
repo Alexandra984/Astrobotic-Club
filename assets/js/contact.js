@@ -17,25 +17,49 @@ const createRegisterPage = ()=> {
         const input1 = document.createElement("INPUT");
         input1.setAttribute("type", "text");
         input1.setAttribute("placeholder", "First Name");
+        input1.setAttribute("aria-describedby", "error-firstName");
         document.getElementById("form-1").appendChild(input1);
+        const div1 = document.createElement("DIV");
+        div1.setAttribute("id", "error-firstName");
+        div1.innerHTML = "buna";
+        document.getElementById("form-1").appendChild(div1);
+        
 
         // last name input
         const input2 = document.createElement("INPUT");
         input2.setAttribute("type", "text");
         input2.setAttribute("placeholder", "Last Name");
+        input1.setAttribute("aria-describedby", "error-lastName");
         document.getElementById("form-1").appendChild(input2);
+        const div2 = document.createElement("DIV");
+        div2.setAttribute("id", "error-lastName");
+        div2.innerHTML = "buna";
+        document.getElementById("form-1").appendChild(div2);
+        
 
         // email input
         const input3 = document.createElement("INPUT"); 
         input3.setAttribute("type", "email");
         input3.setAttribute("placeholder", "Email");
+        input1.setAttribute("aria-describedby", "error-email");
         document.getElementById("form-1").appendChild(input3);
+        const div3 = document.createElement("DIV");
+        div3.setAttribute("id", "error-email");
+        div3.innerHTML = "buna";
+        document.getElementById("form-1").appendChild(div3);
+        
 
         // password input
         const input4 = document.createElement("INPUT");
         input4.setAttribute("type", "password");
         input4.setAttribute("placeholder", "Password");
+        input1.setAttribute("aria-describedby", "error-password");
         document.getElementById("form-1").appendChild(input4);
+        const div4 = document.createElement("DIV");
+        div4.setAttribute("id", "error-password");
+        div4.innerHTML = "buna";
+        document.getElementById("form-1").appendChild(div4);
+        
 
         // checkbox input
         const student = document.createElement("P");
