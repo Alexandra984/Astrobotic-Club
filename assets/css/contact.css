@@ -72,3 +72,7 @@ select {
     width: 20px;
     margin-top: -20px;
 }
+
+#error-firstName, #error-lastName, #error-email, #error-password {
+    color: red;
+}
