@@ -177,6 +177,7 @@ const createRegisterPage = ()=> {
         const buton1 = document.createElement("BUTTON");
         buton1.setAttribute("type", "submit");
         buton1.setAttribute("id", "buton");
+        buton1.setAttribute("class", "w3-button w3-blue");
         const text1 = document.createTextNode("Trimite");
         buton1.appendChild(text1);
         document.getElementById("form-1").appendChild(buton1);
@@ -266,11 +267,12 @@ const createRegisterPage = ()=> {
 
         // check conditions for submitting
         const form = document.getElementById("form-1");
-        
+
         form.addEventListener("submit", function(event) {            
             if (errorFirstName.innerHTML == "" && errorFirstName.innerHTML == "" && errorEmail.innerHTML == "" && errorPassword.innerHTML == "Parola Puternica") {
-                console.log("campuri completate corect");
+                console.log("Toate campurile sunt completate corect");
             } else {
+                Swal.fire('Oops...', 'Trebuie toate campurile completate!', 'error')
                 event.preventDefault();
             }
 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SweetAler2</title>
+    <link rel="stylesheet" href="./node_modules/sweetalert2/dist/sweetalert2.css">
+</head>
+<body>
+
+    <form action="" id="form-1"></form>
+
+    <script src="./node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script>
+        
+        const buton1 = document.createElement("BUTTON");
+        buton1.setAttribute("type", "button");
+        buton1.setAttribute("id", "buton");
+        buton1.setAttribute("class", "w3-button w3-blue");
+        buton1.setAttribute("onclick", "sweetalertclick()");
+        const text1 = document.createTextNode("Trimite");
+        buton1.appendChild(text1);
+        document.getElementById("form-1").appendChild(buton1);
+       
+        function sweetalertclick() {
+            Swal.fire('Hello world!');
+
+        }
+    </script>
+</body>
+</html>

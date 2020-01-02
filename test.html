@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://kit.fontawesome.com/c58e1b313a.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="./node_modules/sweetalert2/dist/sweetalert2.min.css">
     <title>Document</title>
 </head>
 
@@ -26,7 +27,8 @@
 <body>
     <form id="form-1"></form class>
 
-
+    
+        <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
     <script>
         const input4 = document.createElement("INPUT");
         input4.setAttribute("type", "password");
@@ -44,6 +46,7 @@
         const buton1 = document.createElement("BUTTON");
         buton1.setAttribute("type", "submit");
         buton1.setAttribute("id", "buton");
+        buton1.setAttribute("class", "w3-button w3-blue");
         const text1 = document.createTextNode("Trimite");
         buton1.appendChild(text1);
         document.getElementById("form-1").appendChild(buton1);
@@ -73,10 +76,16 @@
         form.addEventListener("submit", function(event) {
             const passwordValue = password.value;
             console.log(passwordValue);
-            alert(passwordValue);
+
+
             if (passwordValue) {
                 console.log("super");
+                Swal.fire('Oops...', 'Something went wrong!', 'error')
+
+
             } else {
+                Swal.fire('Oops...', 'Trebuie toate campurile completate!', 'error')
+
                 event.preventDefault();
             }
         });
