@@ -188,13 +188,6 @@ const createRegisterPage = ()=> {
     // Create the validation-form function
     const validateForm = () => {
         
-        const form = document.getElementById("form-1");
-
-        // block the form until the user completes all fields
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-        });
-        
         // check first name
         const firstName = document.getElementById("firstName");
         const errorFirstName = document.getElementById("error-firstName");
@@ -272,8 +265,17 @@ const createRegisterPage = ()=> {
         });
 
         // check conditions for submitting
+        const form = document.getElementById("form-1");
         
+        form.addEventListener("submit", function(event) {            
+            if (errorFirstName.innerHTML == "" && errorFirstName.innerHTML == "" && errorEmail.innerHTML == "" && errorPassword.innerHTML == "Parola Puternica") {
+                console.log("campuri completate corect");
+            } else {
+                event.preventDefault();
+            }
 
+        });
+        
     };
 
     validateForm();

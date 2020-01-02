@@ -7,8 +7,24 @@
     <script src="https://kit.fontawesome.com/c58e1b313a.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
+
+    <style>
+        #form-1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid green;
+            padding: 10px;
+            width: 200px;
+            position: absolute;
+            /* top: 50%; */
+            left: 50%;
+            transform: translateX(-50%) /*translateY(-50%)*/;
+        }
+    </style>
 <body>
-    
+    <form id="form-1"></form class>
 
 
     <script>
@@ -17,13 +33,21 @@
         input4.setAttribute("placeholder", "Password");
         input4.setAttribute("aria-describedby", "error-password");
         input4.setAttribute("id", "password");
-        document.body.appendChild(input4);
+        document.getElementById("form-1").appendChild(input4);
         const i = document.createElement("i");
         i.setAttribute("id", "pass-status");
         i.setAttribute("class", "fa fa-eye");
         i.setAttribute("aria-hidden", "true");
         i.setAttribute("onclick", "viewPassword()");
-        document.body.appendChild(i);
+        document.getElementById("form-1").appendChild(i);
+
+        const buton1 = document.createElement("BUTTON");
+        buton1.setAttribute("type", "submit");
+        buton1.setAttribute("id", "buton");
+        const text1 = document.createTextNode("Trimite");
+        buton1.appendChild(text1);
+        document.getElementById("form-1").appendChild(buton1);
+       
 
         console.log(i);
 
@@ -42,6 +66,25 @@
             }
         }
 
+        const form = document.getElementById("form-1");
+        const password = document.getElementById("password");
+        console.log(password);
+        
+        form.addEventListener("submit", function(event) {
+            const passwordValue = password.value;
+            console.log(passwordValue);
+            alert(passwordValue);
+            if (passwordValue) {
+                console.log("super");
+            } else {
+                event.preventDefault();
+            }
+        });
+
+    
+      
+  
+        
        
   
     </script>
