@@ -1,0 +1,17 @@
+:root {
+    --primary: rgb(238, 248, 242);
+    --secondary:rgb(199, 247, 211);
+}
+
+body {
+    background: #fff;
+}
+
+#form-setup {
+    border: 1px solid var(--secondary);
+    width: 250px;
+    display: flex;
+    text-align: center;
+    margin: 20px 10px;
+    background: var(--primary);
+}
