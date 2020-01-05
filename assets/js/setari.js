@@ -76,6 +76,33 @@ const getMessage = () => {
     
 }
 
+const ajaxGetUsers = () => {
+    const btn = document.getElementById("button2").addEventListener("click", loadUsers); 
+
+    function loadUsers() {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', 'users.json', true);
+
+        xhr.onload = function() {
+            if (this.status == 200) {
+                const users = JSON.parse(this.responseText);
+
+                let output = '';
+
+                for(let i in users) {
+                    output += '<ul>' +
+                    '<li>Name: ' + users[i].name+'</li>' +
+                    '<li>Email: ' + users[i].email+'</li>' +
+                    '</ul>';
+                }
+
+                document.getElementById('users').innerHTML = output;
+            }
+        }
+        xhr.send();
+    }
+
+}
 
 
 
@@ -84,6 +111,6 @@ setFontSize();
 setTextColor();
 setDarkMode();
 getMessage();
-
+ajaxGetUsers();
 }
 setup();
