@@ -44,6 +44,32 @@ const setDarkMode = () => {
 }); 
 };
 
+// Schimare continua a culorii de fundal
+const randomColor = () => {
+    const randomColor = document.querySelectorAll("input")[5];
+    randomColor.addEventListener("click", function() {
+        var myVar = null;
+        if (randomColor.checked) {
+            function start() {
+                myVar = setInterval(function() {
+                var hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+        
+                document.body.style.backgroundColor = hue;
+        
+                start();
+            }, 5000); 
+        }
+        start();
+        } else {
+            function stop() {
+                clearInterval(myVar);
+            };
+            stop();
+        }
+    });
+};
+
+
 // mesaj
 const getMessage = () => {
     const submission = document.getElementById("submit");
@@ -62,15 +88,15 @@ const getMessage = () => {
         messages.push(darkMode.checked);
 
         const infoMessage = document.querySelector(".info_message");
-        infoMessage.innerHTML = "Ai ales: Background " + messages[0] +
-                                ", marimea textului " + messages[1] +
-                                ", culoarea textului "+ messages[2] +
-                                ", darkmode " + messages[3];
+        infoMessage.innerHTML = "Ai ales: Background: " + messages[0] +
+                                ", marimea textului: " + messages[1] +
+                                ", culoarea textului: "+ messages[2] +
+                                ", darkmode: " + messages[3];
                                 
         
-        console.log(infoMessage.innetText);
-
-        console.log(messages);
+        setTimeout(function() {
+            infoMessage.parentNode.removeChild(infoMessage);
+        }, 3000)
     });
     
     
@@ -91,6 +117,7 @@ const ajaxGetUsers = () => {
 
                 for(let i in users) {
                     output += '<ul>' +
+
                     '<li>Name: ' + users[i].name+'</li>' +
                     '<li>Email: ' + users[i].email+'</li>' +
                     '</ul>';
@@ -110,6 +137,7 @@ setBeckground();
 setFontSize();
 setTextColor();
 setDarkMode();
+randomColor();
 getMessage();
 ajaxGetUsers();
 }
